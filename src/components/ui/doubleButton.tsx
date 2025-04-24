@@ -1,8 +1,15 @@
-'use client';
+"use client";
 
-import { Users, ScrollText } from 'lucide-react';
+import { Users, ScrollText } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function DoubleButton() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/tuto"); // redirection vers /contact
+  };
+
   return (
     <div className="flex rounded-full overflow-hidden shadow-lg">
       {/* Bouton 1 - Nous rejoindre (remplissage de droite à gauche) */}
@@ -18,7 +25,10 @@ export default function DoubleButton() {
       </button>
 
       {/* Bouton 2 - Nos tutoriels (remplissage gauche → droite) */}
-      <button className="relative flex items-center gap-2 px-6 py-2 bg-green-600 text-white font-semibold overflow-hidden rounded-r-full border-l border-white/40 group">
+      <button
+        className="relative flex items-center gap-2 px-6 py-2 bg-green-600 text-white font-semibold overflow-hidden rounded-r-full border-l border-white/40 group"
+        onClick={handleClick}
+      >
         {/* Fond animé normal */}
         <span className="absolute inset-0 bg-yellow-500 scale-x-0 group-hover:scale-x-100 transform origin-left transition-transform duration-300 ease-in-out z-0"></span>
 

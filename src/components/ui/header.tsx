@@ -49,12 +49,12 @@ export function Header() {
             <nav className="">
               <ul className="flex space-x-6 text-white text-lg font-semibold">
                 <li>
-                  <Link href="/" className="hover:underline">
+                  <Link href="/" className="hover:underline underline font-mono font-bold">
                     Accueil
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tuto" className="hover:underline">
+                  <Link href="/tuto" className="hover:underline font-mono">
                     Nos tutoriels
                   </Link>
                 </li>

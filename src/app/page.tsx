@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CardTuto from "@/components/ui/cardTuto";
 import { Link } from "lucide-react";
+import { Footer } from "@/components/ui/footer";
 
 const texts = [
   "Entraide !",
@@ -73,9 +74,9 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col justify-center">
-        <div className="flex flex-row justify-center">
-          <h2 className="text-green-700 text-2xl font-bold">
+      <div className="bg-green-300 flex flex-col justify-center">
+        <div className=" flex flex-row justify-center">
+          <h2 className="text-green-700 text-2xl font-bold mt-5">
             {" "}
             Voicie quelques tutoriels{" "}
           </h2>
@@ -119,30 +120,31 @@ export default function Home() {
             link="/communaute"
           />
         </div>
-        <div className="flex flex-row justify-center mt-3 mr-2">
+        <div className="flex flex-row justify-center mt-3 mr-2 mb-5">
           <button className="relative flex items-center gap-2 px-6 py-2 bg-green-600 text-white font-semibold overflow-hidden rounded-2xl group">
             <span className="absolute inset-0 bg-yellow-500 w-0 group-hover:w-full transition-all duration-300 ease-in-out z-0"></span>
-
             {/* Contenu au-dessus */}
             <span className="flex items-center gap-2 relative z-10">
               Voire plus de tutoriels !
             </span>
           </button>
         </div>
-        <div>
-          <h1 className=" text-green-700 text-2xl font-bold mt-5 ml-30">
+      </div>
+      <div>
+      <div>
+          <h1 className=" text-green-700 text-2xl font-bold mt-5 ml-30 mb-5">
             Quelques actus sur dofus Actuellement
           </h1>
-          <div className="flex flex-row items-center px-4">
+          <div className="flex flex-row items-start px-4">
             <Image
               src={logoDofus}
               alt="logosPPP"
-              className="flex w-50 m-5 rounded-xl "
+              className="flex w-50 m-5 rounded-xl top-"
             />
             <div className="flex flex-wrap items-center justify-start px-4 ">
-              <div className="flex flex-row text-green-500 text-2xl">
-                <h2 className="text-green-500 text-2xl mb-5">
-                  Dérnier devblog sortie{" "}
+              <div className="flex flex-row text-green-500 ">
+                <h2 className="text-green-500 mb-5">
+                  <strong className="text-2xl">Dérnier devblog sortie</strong> 16/04/2025 - 15h00{" "}
                 </h2>
               </div>
               <p className="text-gray-500">
@@ -258,6 +260,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
