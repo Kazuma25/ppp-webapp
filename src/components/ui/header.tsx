@@ -38,14 +38,14 @@ export function Header() {
       <Image
         src={logoWhiteWidows}
         alt="logosPPP"
-        className="w-15 absolute flex z-999 m-2"
+        className="fixed w-15 flex z-999 m-2"
       />
-      <div className="relative w-full h-120 overflow-hidden">
+      <div className="relative w-full h-130 overflow-hidden">
         <VideoPlayer />
         {/* Overlay général */}
         <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-4 z-10 ">
           {/* Menu top fixe */}
-          <div className="absolute top-0 left-0 w-full flex justify-end px-10 py-6 backdrop-blur-sm bg-green-800/25 z-20">
+          <div className="fixed  top-0 left-0 w-full flex justify-end px-10 py-6 backdrop-blur-sm bg-green-800/25 z-20">
             <nav className="">
               <ul className="flex space-x-6 text-white text-lg font-semibold">
                 <li>

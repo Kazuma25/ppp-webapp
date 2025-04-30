@@ -139,7 +139,7 @@ export default function Home() {
             <Image
               src={logoDofus}
               alt="logosPPP"
-              className="flex w-50 m-5 rounded-xl top-"
+              className="flex w-50 m-5 rounded-xl"
             />
             <div className="flex flex-wrap items-center justify-start px-4 ">
               <div className="flex flex-row text-green-500 ">
